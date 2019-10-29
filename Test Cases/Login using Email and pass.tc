@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login using Email and pass</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec43d514-ac2c-4e5b-b113-a5aba08af0f0</testCaseGuid>
+</TestCaseEntity>
