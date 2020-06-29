@@ -314,64 +314,6 @@
             "description": "The HTTP `PATCH` method is used to update resources on a server. The exact\nuse of `PATCH` requests depends on the server in question. There are a number\nof server implementations which handle `PATCH` differently. Technically, \n`PATCH` supports both Query String parameters and a Request Body.\n\nThis endpoint accepts an HTTP `PATCH` request and provides debug information\nsuch as the HTTP headers, Query String arguments, and the Request Body."
           },
           "response": []
-        },
-        {
-          "name": "GET Request Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "7657282a-700f-4ec0-99bf-87853dc0a275",
-                "exec": [
-                  "var responseJSON;",
-                  "",
-                  "try { ",
-                  "    responseJSON = JSON.parse(responseBody); ",
-                  "    tests['response is valid JSON'] = true;",
-                  "}",
-                  "catch (e) { ",
-                  "    responseJSON = {}; ",
-                  "    tests['response is valid JSON'] = false;",
-                  "}",
-                  "",
-                  "tests['response json contains headers'] = _.has(responseJSON, 'headers');",
-                  "tests['response json contains args'] = _.has(responseJSON, 'args');",
-                  "tests['response json contains url'] = _.has(responseJSON, 'url');",
-                  "",
-                  "tests['args key contains argument passed as url parameter'] = ('test' in responseJSON.args);",
-                  "tests['args passed via request url params has value \"123\"'] = (_.get(responseJSON, 'args.test') === \"123\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "ecd2ada6-8647-40ba-aa52-ebf4e966a7ce",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://postman-echo.com/get?test=123",
-              "protocol": "https",
-              "host": [
-                "postman-echo",
-                "com"
-              ],
-              "path": [
-                "get"
-              ],
-              "query": [
-                {
-                  "key": "test",
-                  "value": "123"
-                }
-              ]
-            },
-            "description": "The HTTP `GET` request method is meant to retrieve data from a server. The data\nis identified by a unique URI (Uniform Resource Identifier). \n\nA `GET` request can pass parameters to the server using \"Query String \nParameters\". For example, in the following request,\n\n> http://example.com/hi/there?hand=wave\n\nThe parameter \"hand\" has the value \"wave\".\n\nThis endpoint echoes the HTTP headers, request parameters and the complete\nURI requested."
-          },
-          "response": []
         }
       ],
       "_postman_id": "9c0b4db7-75e8-4058-a097-7195ed09669b",
