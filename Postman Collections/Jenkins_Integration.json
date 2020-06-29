@@ -47,11 +47,12 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://postman-echo.com/get?test=123",
+              "raw": "https://postman-echo.com.portonics/get?test=123",
               "protocol": "https",
               "host": [
                 "postman-echo",
-                "com"
+                "com",
+                "portonics"
               ],
               "path": [
                 "get"
