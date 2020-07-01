@@ -73,7 +73,7 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "edf11259-39e3-44fd-b58d-55f075825c7b",
                 "exec": [
                   "var responseJSON;",
                   "",
@@ -90,7 +90,17 @@
                   "tests['response has post data'] = _.has(responseJSON, 'form');",
                   "tests['response matches the data posted'] = (responseJSON.form && responseJSON.form.strange === 'boom');"
                 ],
-                "id": "edf11259-39e3-44fd-b58d-55f075825c7b"
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0ae039be-d614-4931-b64c-3cfaf14c1c25",
+                "exec": [
+                  " pm.environment.set(\"ac\", \"https://postman-echo.com/get\");"
+                ],
+                "type": "text/javascript"
               }
             }
           ],
