@@ -98,8 +98,8 @@
               "script": {
                 "id": "0ae039be-d614-4931-b64c-3cfaf14c1c25",
                 "exec": [
-                  " pm.environment.set(\"ac\", \"get\");\r",
-                  "pm.globals.get(\"ac\");"
+                  "pm.environment.set(\"ac\", \"get\");\r",
+                  "pm.environment.get(\"ac\");"
                 ],
                 "type": "text/javascript"
               }
