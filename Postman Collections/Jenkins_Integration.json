@@ -20,7 +20,7 @@
                   "var responseJSON;",
                   "",
                   "try { ",
-                  "    responseJSON = JSON.parse(responseBody).portonics.com; ",
+                  "    responseJSON = JSON.parse(responseBody); ",
                   "    tests['response is valid JSON'] = true;",
                   "}",
                   "catch (e) { ",
