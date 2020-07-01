@@ -98,7 +98,7 @@
               "script": {
                 "id": "0ae039be-d614-4931-b64c-3cfaf14c1c25",
                 "exec": [
-                  " pm.environment.set(\"ac\", \"https://postman-echo.com/get\");"
+                  " pm.environment.set(\"ac\", \"get\");"
                 ],
                 "type": "text/javascript"
               }
