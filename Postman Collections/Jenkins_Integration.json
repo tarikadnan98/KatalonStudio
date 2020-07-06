@@ -119,7 +119,26 @@
                 "id": "0ae039be-d614-4931-b64c-3cfaf14c1c25",
                 "exec": [
                   "pm.environment.set(\"ac\", \"get\");\r",
-                  "pm.environment.get(\"ac\");"
+                  "pm.environment.get(\"ac\");\r",
+                  "\r",
+                  "pm.sendRequest({\r",
+                  "        url: 'https://postman-echo.com/delete',\r",
+                  "        method: 'DELETE',\r",
+                  "        header: {\r",
+                  "            \"Content-Type\": \"application/json\"\r",
+                  "        },\r",
+                  "        body: {\r",
+                  "            mode: 'raw',\r",
+                  "            raw: JSON.stringify({key: \"Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus.Morbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed.\"})\r",
+                  "        },\r",
+                  "        function (err, res) {\r",
+                  "          if (err) {\r",
+                  "           console.log(err);\r",
+                  "        } else {\r",
+                  "           pm.environment.set(\"variable_key\", \"new_value\");\r",
+                  "        }\r",
+                  " }});\r",
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -142,8 +161,8 @@
               "urlencoded": [
                 {
                   "key": "strange",
-                  "value": "boom",
-                  "type": "text"
+                  "type": "text",
+                  "value": "boom"
                 }
               ],
               "options": {
