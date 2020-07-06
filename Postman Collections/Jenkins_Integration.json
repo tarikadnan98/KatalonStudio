@@ -47,12 +47,12 @@
                   "            raw: JSON.stringify({key: \"Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus.Morbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed.\"})",
                   "        },",
                   "        function (err, res) {",
-                  "    if (err) {",
-                  "        console.log(err);",
-                  "    } else {",
-                  "        pm.environment.set(\"variable_key\", \"new_value\");",
-                  "    }",
-                  "});",
+                  "          if (err) {",
+                  "           console.log(err);",
+                  "        } else {",
+                  "           pm.environment.set(\"variable_key\", \"new_value\");",
+                  "        }",
+                  " }});",
                   ""
                 ],
                 "type": "text/javascript"
