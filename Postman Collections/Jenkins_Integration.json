@@ -33,7 +33,22 @@
                   "tests['response json contains url'] = _.has(responseJSON, 'url');",
                   "",
                   "tests['args key contains argument passed as url parameter'] = ('test' in responseJSON.args);",
-                  "tests['args passed via request url params has value \"123\"'] = (_.get(responseJSON, 'args.test') === \"123\");"
+                  "tests['args passed via request url params has value \"123\"'] = (_.get(responseJSON, 'args.test') === \"123\");",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "// Example with a full fledged SDK Request",
+                  "const echoPostRequest = {",
+                  "  url: 'https://postman-echo.com/post',",
+                  "  method: 'POST',",
+                  "  header: 'headername1:value1',",
+                  "  body: {",
+                  "    mode: 'raw',",
+                  "    raw: JSON.stringify({ key: 'this is json' })",
+                  "  }",
+                  "};"
                 ],
                 "type": "text/javascript"
               }
