@@ -36,7 +36,7 @@
                   "tests['args passed via request url params has value \"123\"'] = (_.get(responseJSON, 'args.test') === \"123\");",
                   "",
                   "",
-                  " pm.sendRequest({",
+                  "pm.sendRequest({",
                   "        url: 'https://postman-echo.com/delete',",
                   "        method: 'DELETE',",
                   "        header: {",
