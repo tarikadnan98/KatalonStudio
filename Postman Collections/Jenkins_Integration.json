@@ -162,7 +162,7 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
+                "id": "c46dbb5e-65ef-4d19-b452-71b2fe49785b",
                 "exec": [
                   "var responseJSON;",
                   "",
@@ -179,7 +179,33 @@
                   "tests['response has PUT data'] = _.has(responseJSON, 'data');",
                   "tests['response matches the data sent in request'] = (responseJSON.data && responseJSON.data.length === 256);"
                 ],
-                "id": "c46dbb5e-65ef-4d19-b452-71b2fe49785b"
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "a3f70273-9a04-4df4-a5e4-0542d6ea9a2b",
+                "exec": [
+                  "pm.sendRequest({\r",
+                  "        url: 'https://postman-echo.com/delete',\r",
+                  "        method: 'DELETE',\r",
+                  "        header: {\r",
+                  "            \"Content-Type\": \"application/json\"\r",
+                  "        },\r",
+                  "        body: {\r",
+                  "            mode: 'raw',\r",
+                  "            raw: JSON.stringify({key: \"Donec fermentum, nisi sed cursus eleifend, nulla tortor ultricies tellus, ut vehicula orci arcu ut velit. In volutpat egestas dapibus.Morbi condimentum vestibulum sapien. Etiam dignissim diam quis eros lobortis gravida vel lobortis est. Etiam gravida sed.\"})\r",
+                  "        },\r",
+                  "        function (err, res) {\r",
+                  "          if (err) {\r",
+                  "           console.log(err);\r",
+                  "        } else {\r",
+                  "           pm.environment.set(\"variable_key\", \"new_value\");\r",
+                  "        }\r",
+                  " }});"
+                ],
+                "type": "text/javascript"
               }
             }
           ],
