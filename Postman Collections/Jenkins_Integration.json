@@ -67,11 +67,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://postman-echo.com/get?test=123",
-              "protocol": "https",
+              "raw": "{{URL}}/get?test=123",
               "host": [
-                "postman-echo",
-                "com"
+                "{{URL}}"
               ],
               "path": [
                 "get"
