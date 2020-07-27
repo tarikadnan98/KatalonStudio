@@ -77,7 +77,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{URL}}/get?test=123",
+              "raw": "{{URL}}/get?test=1234",
               "host": [
                 "{{URL}}"
               ],
@@ -87,7 +87,7 @@
               "query": [
                 {
                   "key": "test",
-                  "value": "123"
+                  "value": "1234"
                 }
               ]
             },
