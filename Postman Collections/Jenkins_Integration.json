@@ -152,7 +152,7 @@
                 {
                   "key": "strange",
                   "type": "text",
-                  "value": "boom"
+                  "value": "{}"
                 }
               ],
               "options": {
